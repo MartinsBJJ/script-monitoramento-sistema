@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_DIR="monitoramento_server"
+LOG_DIR="monitoramento_system"
 mkdir -p $LOG_DIR
 
 grep -E "(fail(ed)?|error|denied|unauthorized)" /var/log/syslog | awk '{print $1, $2, $3, $5, $6, $7}' > $LOG_DIR/monitoramento_logs_sistema.txt
